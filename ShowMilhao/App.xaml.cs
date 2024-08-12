@@ -178,7 +178,6 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "CHINÊS" },
         new Alternativa { Correta = false, Descricao = "COREANO" },
-        new Alternativa { Correta = false, Descricao = "VIETNAMITA" },
         new Alternativa { Correta = true, Descricao = "JAPONÊS" },
     }
 },

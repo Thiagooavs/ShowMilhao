@@ -6,7 +6,7 @@ namespace ShowMilhao
     {
 
 
-        List<Pergunta> perguntas_faceis = new()
+        static List<Pergunta> perguntas_faceis = new()
         {
             new Pergunta
             {
@@ -247,9 +247,18 @@ new Pergunta
     }
 },
         };
+        /* Perguntas faceis 1 a 20 */
 
+        public static Pergunta getRendomPerguntaFacil()
+        {
+            Random r = new Random();
 
-        List<Pergunta> perguntas_medias = new()
+            int sorteado = r.Next(1, perguntas_faceis.Count);
+
+            return perguntas_faceis[sorteado];
+        }
+
+        static List<Pergunta> perguntas_medias = new()
         {
             new Pergunta
 {
@@ -515,7 +524,16 @@ new Pergunta
 
         };
 
-        List<Pergunta> perguntas_dificeis = new()
+        public static Pergunta getRendomPerguntaMedias()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(21, perguntas_faceis.Count);
+
+            return perguntas_faceis[sorteado];
+        }
+
+        static List<Pergunta> perguntas_dificeis = new()
         {
            new Pergunta
 {
@@ -778,6 +796,16 @@ new Pergunta
 },
 
         };
+
+        public static Pergunta getRendomPerguntaDificeis()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(41, perguntas_faceis.Count);
+
+            return perguntas_faceis[sorteado];
+        }
+
         public App()
         {
             InitializeComponent();

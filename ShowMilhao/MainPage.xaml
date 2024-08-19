@@ -3,17 +3,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowMilhao.MainPage">
 
+
+    <!-- Crt + K + D-->
     <StackLayout>
         <Button Text="Sortear Fácil" Clicked="Button_Clicked"/>
 
         <Label Text="{Binding Enunciado}"/>
-        
-        <RadioButton Content="{Binding Path=Alternativa[0].Descricao}"/>
-        <RadioButton Content="{Binding Path=Alternativa[1].Descricao}"/>
-        <RadioButton Content="{Binding Path=Alternativa[2].Descricao}"/>
-        <RadioButton Content="{Binding Path=Alternativa[3].Descricao}"/>
 
         <StackLayout>
+
+            <RadioButton x:Name="alt0" Content="{Binding Path=Alternat0iva[0].Descricao}"
+                         Value="{Binding Path=Alternativa[0].Correta }"/>
+
+            <RadioButton x:Name="alt1" Content="{Binding Path=Alternativa[1].Descricao}"
+                         Value="{Binding Path=Alternativa[1].Correta}"/>
+        
+            <RadioButton x:Name="alt2" Content="{Binding Path=Alternativa[2].Descricao}"
+                         Value="{Binding Path=Alternativa[2].Correta}"/>
+
+            <RadioButton x:Name="alt3" Content="{Binding Path=Alternativa[3].Descricao}"
+                         Value="{Binding Path=Alternativa[3].Correta}"/>
+            
+         </StackLayout>
+        
+            
+        <StackLayout Orientation="Horizontal">
             <Button Text="Parar" />
             <Button Text="Proxima" Clicked="Button_Clicked_Proximo"/>
         </StackLayout>

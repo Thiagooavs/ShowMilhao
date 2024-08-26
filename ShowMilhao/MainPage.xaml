@@ -3,7 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowMilhao.MainPage">
 
-
+    <ContentPage.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CheckedStates">
+                        <VisualState x:Name="Checked">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="Green"/>
+                                <Setter Property="Opacity" Value="1"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Unchecked">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="Red"/>
+                                <Setter Property="Opacity" Value="0.5"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
     <!-- Crt + K + D-->
     <StackLayout>
         <Button Text="Sortear Fácil" Clicked="Button_Clicked"/>
@@ -12,25 +33,25 @@
 
         <StackLayout>
 
-            <RadioButton x:Name="alt0" Content="{Binding Path=Alternat0iva[0].Descricao}"
-                         Value="{Binding Path=Alternativa[0].Correta }"/>
+            <RadioButton x:Name="alt0" Content="{Binding Path=Alternativas[0].Descricao}"
+                         Value="{Binding Path=Alternativas[0].Correta }"/>
 
-            <RadioButton x:Name="alt1" Content="{Binding Path=Alternativa[1].Descricao}"
-                         Value="{Binding Path=Alternativa[1].Correta}"/>
-        
-            <RadioButton x:Name="alt2" Content="{Binding Path=Alternativa[2].Descricao}"
-                         Value="{Binding Path=Alternativa[2].Correta}"/>
+            <RadioButton x:Name="alt1" Content="{Binding Path=Alternativas[1].Descricao}"
+                         Value="{Binding Path=Alternativas[1].Correta}"/>
 
-            <RadioButton x:Name="alt3" Content="{Binding Path=Alternativa[3].Descricao}"
-                         Value="{Binding Path=Alternativa[3].Correta}"/>
-            
-         </StackLayout>
-        
-            
+            <RadioButton x:Name="alt2" Content="{Binding Path=Alternativas[2].Descricao}"
+                         Value="{Binding Path=Alternativas[2].Correta}"/>
+
+            <RadioButton x:Name="alt3" Content="{Binding Path=Alternativas[3].Descricao}"
+                         Value="{Binding Path=Alternativas[3].Correta}"/>
+
+        </StackLayout>
+
+
         <StackLayout Orientation="Horizontal">
             <Button Text="Parar" />
             <Button Text="Proxima" Clicked="Button_Clicked_Proximo"/>
         </StackLayout>
-        
+
     </StackLayout>
 </ContentPage>

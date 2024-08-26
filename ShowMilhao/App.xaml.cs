@@ -126,7 +126,7 @@ namespace ShowMilhao
                 {
                  new Alternativa { Correta = false, Descricao = "JOSÉ DE ALENCAR" },
                  new Alternativa { Correta = false, Descricao = "MANUEL BANDEIRA" },
-                 new Alternativa { Correta = false, Descricao = "MACHADO DE ASSIS" },
+                 new Alternativa { Correta = false, Descricao = "MACHADO DE ALENCAR" },
                  new Alternativa { Correta = true, Descricao = "MACHADO DE ASSIS" },
                 }
             },
@@ -179,6 +179,7 @@ new Pergunta
         new Alternativa { Correta = false, Descricao = "CHINÊS" },
         new Alternativa { Correta = false, Descricao = "COREANO" },
         new Alternativa { Correta = true, Descricao = "JAPONÊS" },
+        new Alternativa { Correta = false, Descricao = "ASIÁTICO" }
     }
 },
 
@@ -805,6 +806,26 @@ new Pergunta
 
             return perguntas_faceis[sorteado];
         }
+
+        static List<Pergunta> perguntas_Final = new()
+        {
+            new Pergunta
+            {
+                Id=61,
+                Enunciado = "O dia 21 de abril marca a fundação das cidades de?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = "BRASÍLIA E MOSCOU"},
+                    new Alternativa { Correta = true, Descricao = "BRASÍLIA E ROMA"},
+                    new Alternativa { Correta = false, Descricao = "PARIS E NOVA YORK"},
+                    new Alternativa { Correta = false, Descricao = "CAIRO E ATENAS"}
+                },
+            },
+
+
+
+
+        };
 
         public App()
         {

@@ -254,9 +254,24 @@ new Pergunta
         {
             Random r = new Random();
 
-            int sorteado = r.Next(1, perguntas_faceis.Count);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_faceis[sorteado];
+            while (true)
+            {
+
+                int sorteado = r.Next(1, perguntas_faceis.Count);
+
+                pergunta_sorteada = perguntas_faceis[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+
+                }
+
+            }
+            return pergunta_sorteada;
         }
 
         static List<Pergunta> perguntas_medias = new()
@@ -527,11 +542,30 @@ new Pergunta
 
         public static Pergunta getRendomPerguntaMedias()
         {
+
             Random r = new Random();
 
-            int sorteado = r.Next(21, perguntas_faceis.Count);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_faceis[sorteado];
+            while (true)
+            {
+
+                int sorteado = r.Next(21, perguntas_medias.Count);
+
+                pergunta_sorteada = perguntas_medias[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+
+                }
+
+            }
+            return pergunta_sorteada;
+
+
+
         }
 
         static List<Pergunta> perguntas_dificeis = new()
@@ -802,9 +836,24 @@ new Pergunta
         {
             Random r = new Random();
 
-            int sorteado = r.Next(41, perguntas_faceis.Count);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_faceis[sorteado];
+            while (true)
+            {
+
+                int sorteado = r.Next(41, perguntas_dificeis.Count);
+
+                pergunta_sorteada = perguntas_dificeis[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+
+                }
+
+            }
+            return pergunta_sorteada;
         }
 
         static List<Pergunta> perguntas_Final = new()
@@ -822,10 +871,89 @@ new Pergunta
                 },
             },
 
+            new Pergunta
+            {
+                Id = 62,
+                Enunciado = "Com apenas 17 anos, Pelé foi campeão mundial de futebol na Copa de 1958 usando a camisa número:",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = true, Descricao = "10"},
+                    new Alternativa { Correta = false, Descricao = "12"},
+                    new Alternativa { Correta = false, Descricao = "18"},
+                    new Alternativa { Correta = false, Descricao = "22"}
+                },
+            
+            },
+            new Pergunta
+            {
+                Id = 63,
+                Enunciado = "Tsu Chu e Harpastum foram práticas esportivas que deram origem a qual destes esportes?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = "SUMÔ"},
+                    new Alternativa { Correta = false, Descricao = "KARATE"},
+                    new Alternativa { Correta = true, Descricao = "ESGRIMA"},
+                    new Alternativa { Correta = false, Descricao = "BOXE"}
+                },
+
+            },
+            new Pergunta
+            {
+                Id = 64,
+                Enunciado = "A tecnologia 'Bluetooth' tirou seu nome de: um rio, um rei, um general ou um castelo?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = " Harald Gormsson"},
+                    new Alternativa { Correta = false, Descricao = "Bluthef Hasart"},
+                    new Alternativa { Correta = true, Descricao = "Harald Blåtand"},
+                    new Alternativa { Correta = false, Descricao = "Boleon Hasart"}
+                },
+
+            },
+             new Pergunta
+            {
+                Id = 65,
+                Enunciado = "A Constituição reconhece direitos aos indígenas de quanto do território brasileiro?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = true, Descricao = " SÃO RECONHECIDOS"},
+                    new Alternativa { Correta = false, Descricao = "NÃO SÃO RECONHECIDOS"},
+                    new Alternativa { Correta = false, Descricao = "SÓ OS ATUAIS"},
+                    new Alternativa { Correta = false, Descricao = "EXTRANGEIROS"}
+                },
+
+            },
+
 
 
 
         };
+
+        public static Pergunta getRendomPerguntaFinais()
+        {
+            Random r = new Random();
+
+            Pergunta pergunta_sorteada;
+
+            while (true)
+            {
+
+                int sorteado = r.Next(61, perguntas_Final.Count);
+
+                pergunta_sorteada = perguntas_Final[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+
+                }
+
+            }
+            return pergunta_sorteada;
+        }
+
+        static List<Pergunta> perguntas_sorteadas = new();
 
         public App()
         {

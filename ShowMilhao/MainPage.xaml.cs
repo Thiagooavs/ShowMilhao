@@ -4,10 +4,12 @@
     {
         double premio = 0;
         int pergunta_count = 0;
+        
 
         public MainPage()
         {
             InitializeComponent();
+            lbl_pergunta.Text = "";
         }
         
 
@@ -64,9 +66,9 @@
 
             if (acertou)
             {
-                await DisplayAlert("ACERTOU !!", resp, "ok");
-                avanca_pergunta();
+                await DisplayAlert("ACERTOU !!", resp, "ok");                
                 pergunta_count++;
+                avanca_pergunta();
                 
             }
             else
@@ -90,16 +92,30 @@
                 this.BindingContext = App.getRendomPerguntaFacil();
             }
 
-            if (pergunta_count > 5 && pergunta_count <= 10)
+            if (pergunta_count == 6)
+            {
+                premio = 10000;
+            }
+
+            if (pergunta_count > 6 && pergunta_count <= 10)
             {
                 premio += 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
             }
+            if (pergunta_count == 11)
+            {
+                premio = 100000;
+            }
 
-            if (pergunta_count > 10 && pergunta_count <=15)
+            if (pergunta_count > 11 && pergunta_count <=15)
             {
                 premio += 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
+            }
+
+            if(pergunta_count == 16)
+            {
+                premio = 1000000;
             }
 
            

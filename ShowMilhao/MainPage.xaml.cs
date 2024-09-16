@@ -3,13 +3,16 @@
     public partial class MainPage : ContentPage
     {
         double premio = 0;
-        int pergunta_count = 0;
+        int pergunta_count = 1;
+        string nivel = "Fácil";
         
 
         public MainPage()
         {
-            InitializeComponent();
-            lbl_pergunta.Text = "";
+            InitializeComponent(); 
+            lbl_pergunta.Text = pergunta_count.ToString();
+            lbl_nivel.Text = nivel.ToString();
+            lbl_premio.Text = premio.ToString("C");    
         }
         
 
@@ -90,35 +93,50 @@
             {
                 premio += 1000;
                 this.BindingContext = App.getRendomPerguntaFacil();
-            }
+            };
 
             if (pergunta_count == 6)
             {
                 premio = 10000;
-            }
+                this.BindingContext = App.getRendomPerguntaMedias();
+                nivel = "Médio";
+            };
 
             if (pergunta_count > 6 && pergunta_count <= 10)
             {
                 premio += 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
-            }
+            };
+            
             if (pergunta_count == 11)
             {
                 premio = 100000;
-            }
+                this.BindingContext = App.getRendomPerguntaDificeis();
+                nivel="Difícil";
+            };
 
-            if (pergunta_count > 11 && pergunta_count <=15)
+            if (pergunta_count > 11 && pergunta_count <15)
             {
                 premio += 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
-            }
+            };
+            if (pergunta_count == 15)
+            {
+                premio += 100000;
+                this.BindingContext = App.getRendomPerguntaFinais();
+                nivel = "Final";
+            };
 
-            if(pergunta_count == 16)
+            if (pergunta_count == 16)
             {
                 premio = 1000000;
-            }
+               
+            };
 
-           
+            lbl_pergunta.Text = pergunta_count.ToString();
+            lbl_nivel.Text = nivel.ToString();
+            lbl_premio.Text =  "R$ " + premio.ToString("C");
+
 
         }
 

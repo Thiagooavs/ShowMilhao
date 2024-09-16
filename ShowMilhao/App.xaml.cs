@@ -102,8 +102,9 @@ namespace ShowMilhao
                 {
                     new Alternativa { Correta = false, Descricao = "PARANA"},
                     new Alternativa { Correta = false, Descricao = "MSANTA CATARINA"},
-                    new Alternativa { Correta = false, Descricao = "SÃO PAULO"},
                     new Alternativa { Correta = true, Descricao = "BAHIA"},
+                    new Alternativa { Correta = false, Descricao = "SÃO PAULO"},
+
                 }
             },
             new Pergunta
@@ -125,9 +126,9 @@ namespace ShowMilhao
                 Alternativas = new()
                 {
                  new Alternativa { Correta = false, Descricao = "JOSÉ DE ALENCAR" },
+                 new Alternativa { Correta = true, Descricao = "MACHADO DE ASSIS" },
                  new Alternativa { Correta = false, Descricao = "MANUEL BANDEIRA" },
                  new Alternativa { Correta = false, Descricao = "MACHADO DE ALENCAR" },
-                 new Alternativa { Correta = true, Descricao = "MACHADO DE ASSIS" },
                 }
             },
 
@@ -138,9 +139,9 @@ namespace ShowMilhao
                 Alternativas = new()
                 {
                  new Alternativa { Correta = false, Descricao = "VÊNUS" },
+                 new Alternativa { Correta = true, Descricao = "MERCÚRIO" },
                  new Alternativa { Correta = false, Descricao = "TERRA" },
                  new Alternativa { Correta = false, Descricao = "MARTE" },
-                 new Alternativa { Correta = true, Descricao = "MERCÚRIO" },
                 }
             },
 
@@ -150,103 +151,103 @@ namespace ShowMilhao
                Enunciado = "Qual é o maior oceano do mundo?",
                Alternativas = new()
                {
+                   new Alternativa { Correta = true, Descricao = "OCEANO PACÍFICO" },
                    new Alternativa { Correta = false, Descricao = "OCEANO ATLÂNTICO" },
                    new Alternativa { Correta = false, Descricao = "OCEANO ÁRTICO" },
                    new Alternativa { Correta = false, Descricao = "OCEANO ANTÁRTICO" },
-                   new Alternativa { Correta = true, Descricao = "OCEANO PACÍFICO" },
                }
-},
+             },
 
-new Pergunta
-{
-    Id = 15,
-    Enunciado = "Qual é o símbolo químico do ouro?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "Au" },
-        new Alternativa { Correta = false, Descricao = "Ag" },
-        new Alternativa { Correta = false, Descricao = "Fe" },
-        new Alternativa { Correta = true, Descricao = "Au" },
-    }
-},
+            new Pergunta
+            {
+               Id = 15,
+               Enunciado = "Qual é o símbolo químico do ouro?",
+               Alternativas = new()
+                {
+                  new Alternativa { Correta = false, Descricao = "Ao" },
+                  new Alternativa { Correta = false, Descricao = "Ag" },
+                  new Alternativa { Correta = true, Descricao = "Au" },
+                  new Alternativa { Correta = false, Descricao = "Fe" },
+                }
+             },
 
-new Pergunta
-{
-    Id = 16,
-    Enunciado = "Qual é a língua oficial do Japão?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "CHINÊS" },
-        new Alternativa { Correta = false, Descricao = "COREANO" },
-        new Alternativa { Correta = true, Descricao = "JAPONÊS" },
-        new Alternativa { Correta = false, Descricao = "ASIÁTICO" }
-    }
-},
+             new Pergunta
+             {
+                 Id = 16,
+                 Enunciado = "Qual é a língua oficial do Japão?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = false, Descricao = "CHINÊS" },
+                     new Alternativa { Correta = false, Descricao = "COREANO" },
+                     new Alternativa { Correta = true, Descricao = "JAPONÊS" },
+                     new Alternativa { Correta = false, Descricao = "ASIÁTICO" }
+                 }
+             },
 
-new Pergunta
-{
-    Id = 17,
-    Enunciado = "Qual é o maior mamífero terrestre?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "ELEFANTE AFRICANO" },
-        new Alternativa { Correta = false, Descricao = "BISONTE" },
-        new Alternativa { Correta = false, Descricao = "RINOCERONTE" },
-        new Alternativa { Correta = true, Descricao = "ELEFANTE AFRICANO" },
-    }
-},
+             new Pergunta
+             {
+                 Id = 17,
+                 Enunciado = "Qual é o maior mamífero terrestre?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = false, Descricao = "ELEFANTE AFRICANO" },
+                     new Alternativa { Correta = false, Descricao = "BISONTE" },
+                     new Alternativa { Correta = false, Descricao = "RINOCERONTE" },
+                     new Alternativa { Correta = true, Descricao = "ELEFANTE AFRICANO" },
+                 }
+             },
 
-new Pergunta
-{
-    Id = 18,
-    Enunciado = "Quem pintou a Mona Lisa?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "VINCENT VAN GOGH" },
-        new Alternativa { Correta = false, Descricao = "CLAUDE MONET" },
-        new Alternativa { Correta = false, Descricao = "PABLO PICASSO" },
-        new Alternativa { Correta = true, Descricao = "LEONARDO DA VINCI" },
-    }
-},
+             new Pergunta
+             {
+                 Id = 18,
+                 Enunciado = "Quem pintou a Mona Lisa?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = false, Descricao = "VINCENT VAN GOGH" },
+                     new Alternativa { Correta = false, Descricao = "CLAUDE MONET" },
+                     new Alternativa { Correta = false, Descricao = "PABLO PICASSO" },
+                     new Alternativa { Correta = true, Descricao = "LEONARDO DA VINCI" },
+                 }
+             },
 
-new Pergunta
-{
-    Id = 19,
-    Enunciado = "Qual é a fórmula da água?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "H2O2" },
-        new Alternativa { Correta = false, Descricao = "CO2" },
-        new Alternativa { Correta = false, Descricao = "CH4" },
-        new Alternativa { Correta = true, Descricao = "H2O" },
-    }
-},
+             new Pergunta
+             {
+                 Id = 19,
+                 Enunciado = "Qual é a fórmula da água?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = false, Descricao = "H2O2" },
+                     new Alternativa { Correta = false, Descricao = "CO2" },
+                     new Alternativa { Correta = false, Descricao = "CH4" },
+                     new Alternativa { Correta = true, Descricao = "H2O" },
+                 }
+             },
 
-new Pergunta
-{
-    Id = 20,
-    Enunciado = "Em que continente está localizado o Egito?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "ÁSIA" },
-        new Alternativa { Correta = false, Descricao = "AMÉRICA" },
-        new Alternativa { Correta = false, Descricao = "EUROPA" },
-        new Alternativa { Correta = true, Descricao = "ÁFRICA" },
-    }
-},
+             new Pergunta
+             {
+                 Id = 20,
+                 Enunciado = "Em que continente está localizado o Egito?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = true, Descricao = "ÁFRICA" },
+                     new Alternativa { Correta = false, Descricao = "ÁSIA" },
+                     new Alternativa { Correta = false, Descricao = "AMÉRICA" },
+                     new Alternativa { Correta = false, Descricao = "EUROPA" },
+                 }
+             },
 
-new Pergunta
-{
-    Id = 21,
-    Enunciado = "Qual é o maior rio do mundo em volume de água?",
-    Alternativas = new()
-    {
-        new Alternativa { Correta = false, Descricao = "RIO NILO" },
-        new Alternativa { Correta = false, Descricao = "RIO MISSISSIPI" },
-        new Alternativa { Correta = false, Descricao = "RIO YANGTSÉ" },
-        new Alternativa { Correta = true, Descricao = "RIO AMAZÔNIA" },
-    }
-},
+             new Pergunta
+             {
+                 Id = 21,
+                 Enunciado = "Qual é o maior rio do mundo em volume de água?",
+                 Alternativas = new()
+                 {
+                     new Alternativa { Correta = false, Descricao = "RIO NILO" },
+                     new Alternativa { Correta = true, Descricao = "RIO AMAZÔNIA" },
+                     new Alternativa { Correta = false, Descricao = "RIO MISSISSIPI" },
+                     new Alternativa { Correta = false, Descricao = "RIO YANGTSÉ" },
+                 }
+             },
         };
         /* Perguntas faceis 1 a 20 */
 
@@ -259,7 +260,7 @@ new Pergunta
             while (true)
             {
 
-                int sorteado = r.Next(1, perguntas_faceis.Count);
+                int sorteado = r.Next(0, perguntas_faceis.Count);
 
                 pergunta_sorteada = perguntas_faceis[sorteado];
 
@@ -284,8 +285,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "DESERTO DE SAARA" },
         new Alternativa { Correta = false, Descricao = "DESERTO DE GOBI" },
+        new Alternativa { Correta = true, Descricao = "DESERTO DA ARÁBIA" },
         new Alternativa { Correta = false, Descricao = "DESERTO DA ANTÁRTIDA" },
-        new Alternativa { Correta = true, Descricao = "DESERTO DA ANTÁRTIDA" },
     }
 },
 
@@ -308,10 +309,10 @@ new Pergunta
     Enunciado = "Quem escreveu 'O Pequeno Príncipe'?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "ANTOINE DE VERNE" },
         new Alternativa { Correta = false, Descricao = "ANTOINE DE SAINT-EXUPÉRY" },
         new Alternativa { Correta = false, Descricao = "JULES VERNE" },
         new Alternativa { Correta = false, Descricao = "CHARLES DICKENS" },
-        new Alternativa { Correta = true, Descricao = "ANTOINE DE SAINT-EXUPÉRY" },
     }
 },
 
@@ -321,10 +322,10 @@ new Pergunta
     Enunciado = "Qual é a principal fonte de energia do Sol?",
     Alternativas = new()
     {
-        new Alternativa { Correta = false, Descricao = "FUSÃO NUCLEAR" },
+        new Alternativa { Correta = false, Descricao = "TRAMSMUTAÇÃO" },
+        new Alternativa { Correta = true, Descricao = "FUSÃO NUCLEAR" },
         new Alternativa { Correta = false, Descricao = "FISSÃO NUCLEAR" },
         new Alternativa { Correta = false, Descricao = "REAÇÕES QUÍMICAS" },
-        new Alternativa { Correta = true, Descricao = "FUSÃO NUCLEAR" },
     }
 },
 
@@ -336,8 +337,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "2" },
         new Alternativa { Correta = false, Descricao = "6" },
-        new Alternativa { Correta = false, Descricao = "8" },
         new Alternativa { Correta = true, Descricao = "1" },
+        new Alternativa { Correta = false, Descricao = "8" },
     }
 },
 
@@ -360,10 +361,10 @@ new Pergunta
     Enunciado = "Quem pintou 'A Última Ceia'?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "LEONARDO DA VINCI" },
         new Alternativa { Correta = false, Descricao = "MICHELANGELO" },
         new Alternativa { Correta = false, Descricao = "RAPHAEL" },
         new Alternativa { Correta = false, Descricao = "CARAVAGGIO" },
-        new Alternativa { Correta = true, Descricao = "LEONARDO DA VINCI" },
     }
 },
 
@@ -374,9 +375,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "DEFESA DO ORGANISMO" },
+        new Alternativa { Correta = true, Descricao = "TRANSPORTE DE OXIGÊNIO" },
         new Alternativa { Correta = false, Descricao = "COAGULAÇÃO" },
         new Alternativa { Correta = false, Descricao = "TRANSPORTE DE HORMÔNIOS" },
-        new Alternativa { Correta = true, Descricao = "TRANSPORTE DE OXIGÊNIO" },
     }
 },
 
@@ -387,9 +388,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "NÍQUEL" },
+        new Alternativa { Correta = true, Descricao = "SÓDIO" },
         new Alternativa { Correta = false, Descricao = "NITROGÊNIO" },
         new Alternativa { Correta = false, Descricao = "NÃO" },
-        new Alternativa { Correta = true, Descricao = "SÓDIO" },
     }
 },
 
@@ -401,8 +402,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "SATURNO" },
         new Alternativa { Correta = false, Descricao = "URANO" },
-        new Alternativa { Correta = false, Descricao = "NETUNO" },
         new Alternativa { Correta = true, Descricao = "JÚPITER" },
+        new Alternativa { Correta = false, Descricao = "NETUNO" },
     }
 },
 
@@ -425,10 +426,10 @@ new Pergunta
     Enunciado = "Qual é o maior animal marinho?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "BALEIA AZUL" },
         new Alternativa { Correta = false, Descricao = "ORCA" },
         new Alternativa { Correta = false, Descricao = "TUBARÃO-BALEIA" },
         new Alternativa { Correta = false, Descricao = "PINGUIM IMPERIAL" },
-        new Alternativa { Correta = true, Descricao = "BALEIA AZUL" },
     }
 },
 
@@ -439,9 +440,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "FÓSFORO" },
-        new Alternativa { Correta = false, Descricao = "FLORETO" },
-        new Alternativa { Correta = false, Descricao = "FERRO" },
         new Alternativa { Correta = true, Descricao = "FERRO" },
+        new Alternativa { Correta = false, Descricao = "FLORETO" },
+        new Alternativa { Correta = false, Descricao = "CLOROFILA" },
     }
 },
 
@@ -453,8 +454,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "Fobos" },
         new Alternativa { Correta = false, Descricao = "Ío" },
-        new Alternativa { Correta = false, Descricao = "Titan" },
         new Alternativa { Correta = true, Descricao = "Lua" },
+        new Alternativa { Correta = false, Descricao = "Titan" },
     }
 },
 
@@ -477,10 +478,10 @@ new Pergunta
     Enunciado = "Qual é o nome da maior cadeia de montanhas do mundo?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Himalaias" },
         new Alternativa { Correta = false, Descricao = "Montanhas Rochosas" },
         new Alternativa { Correta = false, Descricao = "Alpes" },
         new Alternativa { Correta = false, Descricao = "Montanhas do Atlas" },
-        new Alternativa { Correta = true, Descricao = "Himalaias" },
     }
 },
 
@@ -491,9 +492,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "THEODORE ROOSEVELT" },
+        new Alternativa { Correta = true, Descricao = "FRANKLIN D. ROOSEVELT" },
         new Alternativa { Correta = false, Descricao = "HARRY TRUMAN" },
         new Alternativa { Correta = false, Descricao = "WOODROW WILSON" },
-        new Alternativa { Correta = true, Descricao = "FRANKLIN D. ROOSEVELT" },
     }
 },
 
@@ -505,8 +506,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "DIOXÍDIO DE CARBONO" },
         new Alternativa { Correta = false, Descricao = "HÉLIO" },
-        new Alternativa { Correta = false, Descricao = "ARGÔNIO" },
         new Alternativa { Correta = true, Descricao = "NITROGÊNIO" },
+        new Alternativa { Correta = false, Descricao = "ARGÔNIO" },
     }
 },
 
@@ -516,7 +517,7 @@ new Pergunta
     Enunciado = "Qual é o nome da famosa torre inclinada na Itália?",
     Alternativas = new()
     {
-        new Alternativa { Correta = false, Descricao = "Torre de Pisa" },
+        new Alternativa { Correta = false, Descricao = "Torre de Versales" },
         new Alternativa { Correta = false, Descricao = "Torre de Veneza" },
         new Alternativa { Correta = false, Descricao = "Torre de Roma" },
         new Alternativa { Correta = true, Descricao = "Torre de Pisa" },
@@ -529,10 +530,10 @@ new Pergunta
     Enunciado = "Qual é o nome da teoria que descreve a origem do universo?",
     Alternativas = new()
     {
-        new Alternativa { Correta = false, Descricao = "Teoria da Relatividade" },
-        new Alternativa { Correta = false, Descricao = "Teoria do Big Bang" },
-        new Alternativa { Correta = false, Descricao = "Teoria da Evolução" },
         new Alternativa { Correta = true, Descricao = "Teoria do Big Bang" },
+        new Alternativa { Correta = false, Descricao = "Teoria da Relatividade" },
+        new Alternativa { Correta = false, Descricao = "Teoria do Central" },
+        new Alternativa { Correta = false, Descricao = "Teoria da Evolução" },
     }
 },
 
@@ -550,7 +551,7 @@ new Pergunta
             while (true)
             {
 
-                int sorteado = r.Next(21, perguntas_medias.Count);
+                int sorteado = r.Next(0, perguntas_medias.Count);
 
                 pergunta_sorteada = perguntas_medias[sorteado];
 
@@ -576,10 +577,10 @@ new Pergunta
     Enunciado = "Qual é o nome do fenômeno pelo qual a luz é desviada ao passar por um campo gravitacional intenso?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Lente Gravitacional" },
         new Alternativa { Correta = false, Descricao = "Efeito Doppler" },
         new Alternativa { Correta = false, Descricao = "Efeito Compton" },
         new Alternativa { Correta = false, Descricao = "Desvio para o Vermelho" },
-        new Alternativa { Correta = true, Descricao = "Lente Gravitacional" },
     }
 },
 
@@ -590,9 +591,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "A República" },
+        new Alternativa { Correta = true, Descricao = "Crítica da Razão Pura" },
         new Alternativa { Correta = false, Descricao = "O Capital" },
         new Alternativa { Correta = false, Descricao = "Assim Falou Zaratustra" },
-        new Alternativa { Correta = true, Descricao = "Crítica da Razão Pura" },
     }
 },
 
@@ -602,7 +603,7 @@ new Pergunta
     Enunciado = "Qual é a teoria que propõe que a vida na Terra pode ter sido originada a partir de moléculas orgânicas trazidas por meteoritos ou cometas?",
     Alternativas = new()
     {
-        new Alternativa { Correta = false, Descricao = "Teoria da Panspermia" },
+        new Alternativa { Correta = false, Descricao = "Teoria da Pansparminia" },
         new Alternativa { Correta = false, Descricao = "Teoria da Abiogênese" },
         new Alternativa { Correta = false, Descricao = "Teoria da Evolução" },
         new Alternativa { Correta = true, Descricao = "Teoria da Panspermia" },
@@ -617,8 +618,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "Isaac Newton" },
         new Alternativa { Correta = false, Descricao = "Niels Bohr" },
-        new Alternativa { Correta = false, Descricao = "Galileu Galilei" },
         new Alternativa { Correta = true, Descricao = "Albert Einstein" },
+        new Alternativa { Correta = false, Descricao = "Galileu Galilei" },
     }
 },
 
@@ -629,9 +630,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "Astronomia" },
-        new Alternativa { Correta = false, Descricao = "Cosmologia" },
-        new Alternativa { Correta = false, Descricao = "Astrofísica" },
+        new Alternativa { Correta = false, Descricao = "Cosmonomia" },
         new Alternativa { Correta = true, Descricao = "Cosmologia" },
+        new Alternativa { Correta = false, Descricao = "Astrofísica" },
     }
 },
 
@@ -654,10 +655,10 @@ new Pergunta
     Enunciado = "Qual é o nome do método que utiliza amostras de DNA para identificar indivíduos?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Perfil Genético" },
         new Alternativa { Correta = false, Descricao = "PCR" },
         new Alternativa { Correta = false, Descricao = "Eletroforese" },
         new Alternativa { Correta = false, Descricao = "Sequenciamento Genético" },
-        new Alternativa { Correta = true, Descricao = "Perfil Genético" },
     }
 },
 
@@ -667,7 +668,7 @@ new Pergunta
     Enunciado = "Qual foi o nome da primeira sonda espacial a pousar em outro planeta?",
     Alternativas = new()
     {
-        new Alternativa { Correta = false, Descricao = "Viking 1" },
+        new Alternativa { Correta = false, Descricao = "Valte 1" },
         new Alternativa { Correta = false, Descricao = "Voyager 1" },
         new Alternativa { Correta = false, Descricao = "Cassini" },
         new Alternativa { Correta = true, Descricao = "Viking 1" },
@@ -681,9 +682,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "Universidade de Oxford" },
+        new Alternativa { Correta = true, Descricao = "Universidade de Al Quaraouiyine" },
         new Alternativa { Correta = false, Descricao = "Universidade de Bolonha" },
         new Alternativa { Correta = false, Descricao = "Universidade de Paris" },
-        new Alternativa { Correta = true, Descricao = "Universidade de Al Quaraouiyine" },
     }
 },
 
@@ -695,8 +696,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "A Divina Comédia" },
         new Alternativa { Correta = false, Descricao = "Os Lusíadas" },
-        new Alternativa { Correta = false, Descricao = "O Príncipe" },
         new Alternativa { Correta = true, Descricao = "A Bíblia de Gutenberg" },
+        new Alternativa { Correta = false, Descricao = "O Príncipe" },
     }
 },
 
@@ -719,10 +720,10 @@ new Pergunta
     Enunciado = "Qual é o nome do fenômeno pelo qual a matéria é convertida em energia, conforme descrito pela equação E=mc²?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Aniquilação" },
         new Alternativa { Correta = false, Descricao = "Fissão Nuclear" },
         new Alternativa { Correta = false, Descricao = "Fusão Nuclear" },
         new Alternativa { Correta = false, Descricao = "Desintegração Radioativa" },
-        new Alternativa { Correta = true, Descricao = "Aniquilação" },
     }
 },
 
@@ -733,9 +734,9 @@ new Pergunta
     Alternativas = new()
     {
         new Alternativa { Correta = false, Descricao = "Java" },
+        new Alternativa { Correta = true, Descricao = "C++" },
         new Alternativa { Correta = false, Descricao = "Python" },
         new Alternativa { Correta = false, Descricao = "C#" },
-        new Alternativa { Correta = true, Descricao = "C++" },
     }
 },
 
@@ -747,8 +748,8 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "Revolução Húngara" },
         new Alternativa { Correta = false, Descricao = "Revolução Velha" },
-        new Alternativa { Correta = false, Descricao = "Revolução de 1968" },
         new Alternativa { Correta = true, Descricao = "Queda do Muro de Berlim" },
+        new Alternativa { Correta = false, Descricao = "Revolução de 1968" },
     }
 },
 
@@ -758,10 +759,10 @@ new Pergunta
     Enunciado = "Qual é o nome do estudo da estrutura dos átomos e suas interações?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Física Atômica" },
         new Alternativa { Correta = false, Descricao = "Física Nuclear" },
         new Alternativa { Correta = false, Descricao = "Química Orgânica" },
         new Alternativa { Correta = false, Descricao = "Química Analítica" },
-        new Alternativa { Correta = true, Descricao = "Física Atômica" },
     }
 },
 
@@ -797,10 +798,10 @@ new Pergunta
     Enunciado = "Qual é o nome do princípio pelo qual as leis da física são as mesmas para todos os sistemas inerciais?",
     Alternativas = new()
     {
+        new Alternativa { Correta = true, Descricao = "Princípio da Relatividade" },
         new Alternativa { Correta = false, Descricao = "Princípio da Incerteza" },
         new Alternativa { Correta = false, Descricao = "Princípio de Heisenberg" },
-        new Alternativa { Correta = false, Descricao = "Princípio da Relatividade" },
-        new Alternativa { Correta = true, Descricao = "Princípio da Relatividade" },
+        new Alternativa { Correta = false, Descricao = "Princípio da Ralberg" },
     }
 },
 
@@ -825,7 +826,7 @@ new Pergunta
     {
         new Alternativa { Correta = false, Descricao = "Leonhard Euler" },
         new Alternativa { Correta = false, Descricao = "Carl Friedrich Gauss" },
-        new Alternativa { Correta = false, Descricao = "Bernhard Riemann" },
+        new Alternativa { Correta = false, Descricao = "Bernhard Ri" },
         new Alternativa { Correta = true, Descricao = "Bernhard Riemann" },
     }
 },
@@ -841,7 +842,7 @@ new Pergunta
             while (true)
             {
 
-                int sorteado = r.Next(41, perguntas_dificeis.Count);
+                int sorteado = r.Next(0, perguntas_dificeis.Count);
 
                 pergunta_sorteada = perguntas_dificeis[sorteado];
 
@@ -882,7 +883,7 @@ new Pergunta
                     new Alternativa { Correta = false, Descricao = "18"},
                     new Alternativa { Correta = false, Descricao = "22"}
                 },
-            
+
             },
             new Pergunta
             {
@@ -938,7 +939,7 @@ new Pergunta
             while (true)
             {
 
-                int sorteado = r.Next(61, perguntas_Final.Count);
+                int sorteado = r.Next(0, perguntas_Final.Count);
 
                 pergunta_sorteada = perguntas_Final[sorteado];
 

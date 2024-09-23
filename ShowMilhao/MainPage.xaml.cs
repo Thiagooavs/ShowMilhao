@@ -1,19 +1,21 @@
-﻿
-using Plugin.Maui.Audio;
+﻿using Plugin.Maui.Audio;
 
 namespace ShowMilhao
 
 {
     public partial class MainPage : ContentPage
     {
-        double premio = 0;
+        double premio = 1000;
         int pergunta_count = 1;
         string nivel = "Fácil";
         
 
         public MainPage()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+
+            Stream track = FileSystem.OpenAppPackageFileAsync("abertura-show-do-milhao.mp3").Result;
+            AudioManager.Current.CreatePlayer(track).Play();
 
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
@@ -22,14 +24,15 @@ namespace ShowMilhao
             this.BindingContext = App.getRendomPerguntaFacil();
 
             //Audio som
-            Stream track =
-                FileSystem.OpenAppPackageFileAsync("abertura-show-do-milhao.mp3").Result;
-            AudioManager.Current.CreatePlayer(track).Play();
+            
+             
         }
 
         private void TocaSom()
         {
             string track = "";
+
+            
 
             switch (pergunta_count)
             {
@@ -96,6 +99,8 @@ namespace ShowMilhao
                 case 16:
                     track = "1000000.wav";
                     break;
+
+                
             }
 
             AudioManager.Current.CreatePlayer(
@@ -155,6 +160,10 @@ namespace ShowMilhao
 
             if (acertou)
             {
+                Stream track = FileSystem.OpenAppPackageFileAsync("acertou.wav").Result;
+                AudioManager.Current.CreatePlayer(track).Play();
+                
+
                 await DisplayAlert("ACERTOU !!", resp, "ok");                
                 
                 avanca_pergunta();
@@ -162,6 +171,10 @@ namespace ShowMilhao
             }
             else
             {
+
+                Stream track = FileSystem.OpenAppPackageFileAsync("errou.wav").Result;
+                AudioManager.Current.CreatePlayer(track).Play();
+
                 DisplayAlert("Você errou", "Você perdeu", "ok");
                 
             }
@@ -201,24 +214,18 @@ namespace ShowMilhao
                 nivel="Difícil";
             };
 
-            if (pergunta_count > 11 && pergunta_count <15)
+            if (pergunta_count > 11 && pergunta_count <=15)
             {
                 premio += 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
             };
-            if (pergunta_count == 15)
-            {
-                premio += 100000;
-                this.BindingContext = App.getRendomPerguntaFinais();
-                nivel = "Final";
-            };
-
             if (pergunta_count == 16)
             {
                 premio = 1000000;
-               
+                this.BindingContext = App.getRendomPerguntaFinais();
+                nivel = "Final";
             };
-
+         
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
             lbl_premio.Text =  "R$ " + premio.ToString("C");

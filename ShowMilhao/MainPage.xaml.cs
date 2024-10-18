@@ -1,4 +1,5 @@
-﻿using Plugin.Maui.Audio;
+﻿
+using Plugin.Maui.Audio;
 
 namespace ShowMilhao
 
@@ -14,18 +15,16 @@ namespace ShowMilhao
         {
             InitializeComponent();
 
-            Stream track = FileSystem.OpenAppPackageFileAsync("abertura-show-do-milhao.mp3").Result;
-            AudioManager.Current.CreatePlayer(track).Play();
 
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
             lbl_premio.Text = premio.ToString("C");
+            tabela.Opacity = 0;
 
-            this.BindingContext = App.getRendomPerguntaFacil();
 
             //Audio som
-            
-             
+            AudioManager.Current.CreatePlayer(FileSystem.OpenAppPackageFileAsync("0.mp3").Result).Play();
+
         }
 
         private void TocaSom()
@@ -37,79 +36,88 @@ namespace ShowMilhao
             switch (pergunta_count)
             {
                 case 1: 
-                    track = "1000.wav";
+                    track = "2.wav";
                 break;
 
                 case 2:
-                    track = "2000.wav";
+                    track = "3.wav";
                 break;
 
                 case 3:
-                    track = "3000.wav";
+                    track = "4.wav";
                 break;
 
                 case 4:
-                    track = "4000.wav";
+                    track = "5.wav";
                 break;
 
                 case 5:
-                    track = "5000.wav";
+                    track = "6.wav";
                 break;
 
                 case 6:
-                    track = "10000.wav";
+                    track = "7.wav";
                 break;
 
                 case 7:
-                    track = "20000.wav";
+                    track = "8.wav";
                     break;
 
                 case 8:
-                    track = "30000.wav";
+                    track = "9.wav";
                     break;
 
                 case 9:
-                    track = "40000.wav";
+                    track = "10.wav";
                     break;
 
                 case 10:
-                    track = "50000.wav";
+                    track = "11.wav";
                     break;
 
                 case 11:
-                    track = "100000a.wav";
+                    track = "12.wav";
                     break;
 
                 case 12:
-                    track = "200000.wav";
+                    track = "13.wav";
                     break;
 
                 case 13:
-                    track = "300000.wav";
+                    track = "14.wav";
                     break;
 
                 case 14:
-                    track = "400000.wav";
+                    track = "15.wav";
                     break;
 
                 case 15:
-                    track = "500000.wav";
+                    track = "16.wav";
                     break;
 
-                case 16:
-                    track = "1000000.wav";
-                    break;
+                
 
                 
             }
 
-            AudioManager.Current.CreatePlayer(
-                FileSystem.OpenAppPackageFileAsync(track).Result).Play();
+            AudioManager.Current.CreatePlayer(FileSystem.OpenAppPackageFileAsync(track).Result).Play();
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             this.BindingContext =  App.getRendomPerguntaFacil();
+            comeco.Opacity = 0;
+            tabela.Opacity = 1;
+
+            //Feio, mas é o que da para faezr agora
+            texto1.FontSize = 1;
+            text2.FontSize = 1;
+            texto3.FontSize = 1;
+            texto4.FontSize = 1;
+            texto1.Opacity = 0;
+            text2.Opacity = 0; 
+            texto3.Opacity = 0;
+            texto4.Opacity = 0;
         }
 
         private async void Button_Clicked_Proximo(object sender, EventArgs e)
@@ -172,7 +180,7 @@ namespace ShowMilhao
             else
             {
 
-                Stream track = FileSystem.OpenAppPackageFileAsync("errou.wav").Result;
+                Stream track = FileSystem.OpenAppPackageFileAsync("naofoi.wav").Result;
                 AudioManager.Current.CreatePlayer(track).Play();
 
                 DisplayAlert("Você errou", "Você perdeu", "ok");
@@ -188,47 +196,57 @@ namespace ShowMilhao
            
 
 
-            if (pergunta_count <= 5)
+            if (pergunta_count < 5)
             {
                 premio += 1000;
                 this.BindingContext = App.getRendomPerguntaFacil();
+                TocaSom();
             };
 
-            if (pergunta_count == 6)
+            if (pergunta_count == 5)
             {
                 premio = 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
                 nivel = "Médio";
+                TocaSom() ;
             };
 
-            if (pergunta_count > 6 && pergunta_count <= 10)
+            if (pergunta_count > 5 && pergunta_count < 10)
             {
                 premio += 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
+                TocaSom();
             };
             
-            if (pergunta_count == 11)
+            if (pergunta_count == 10)
             {
                 premio = 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
                 nivel="Difícil";
+                TocaSom();
             };
 
-            if (pergunta_count > 11 && pergunta_count <=15)
+            if (pergunta_count > 10 && pergunta_count <15)
             {
                 premio += 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
+                TocaSom();
             };
-            if (pergunta_count == 16)
+            if (pergunta_count == 15)
             {
                 premio = 1000000;
                 this.BindingContext = App.getRendomPerguntaFinais();
                 nivel = "Final";
+                TocaSom();
+            };
+            if(pergunta_count == 17)
+            {
+                Navigation.PushAsync(new fim.ganhou());
             };
          
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
-            lbl_premio.Text =  "R$ " + premio.ToString("C");
+            lbl_premio.Text = premio.ToString("C");
 
             pergunta_count++;
         }

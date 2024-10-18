@@ -57,141 +57,39 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="Resources\raw\1000.wav" />
-	  <AndroidResource Remove="Resources\raw\10000.wav" />
-	  <AndroidResource Remove="Resources\raw\1000000.wav" />
-	  <AndroidResource Remove="Resources\raw\100000a.wav" />
-	  <AndroidResource Remove="Resources\raw\100000b.wav" />
-	  <AndroidResource Remove="Resources\raw\2000.wav" />
-	  <AndroidResource Remove="Resources\raw\20000.wav" />
-	  <AndroidResource Remove="Resources\raw\200000.wav" />
-	  <AndroidResource Remove="Resources\raw\3000.wav" />
-	  <AndroidResource Remove="Resources\raw\30000.wav" />
-	  <AndroidResource Remove="Resources\raw\300000.wav" />
-	  <AndroidResource Remove="Resources\raw\4000.wav" />
-	  <AndroidResource Remove="Resources\raw\40000.wav" />
-	  <AndroidResource Remove="Resources\raw\400000.wav" />
-	  <AndroidResource Remove="Resources\raw\5000.wav" />
-	  <AndroidResource Remove="Resources\raw\50000.wav" />
-	  <AndroidResource Remove="Resources\raw\500000.wav" />
-	  <AndroidResource Remove="Resources\raw\abertura-show-do-milhao.mp3" />
 	  <AndroidResource Remove="Resources\raw\errou.wav" />
-	  <AndroidResource Remove="Resources\raw\ganhou.wav" />
 	  <AndroidResource Remove="Resources\raw\parabens.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiAsset Remove="Resources\raw\1000.wav" />
-	  <MauiAsset Remove="Resources\raw\10000.wav" />
-	  <MauiAsset Remove="Resources\raw\1000000.wav" />
-	  <MauiAsset Remove="Resources\raw\100000a.wav" />
-	  <MauiAsset Remove="Resources\raw\100000b.wav" />
-	  <MauiAsset Remove="Resources\raw\2000.wav" />
-	  <MauiAsset Remove="Resources\raw\20000.wav" />
-	  <MauiAsset Remove="Resources\raw\200000.wav" />
-	  <MauiAsset Remove="Resources\raw\3000.wav" />
-	  <MauiAsset Remove="Resources\raw\30000.wav" />
-	  <MauiAsset Remove="Resources\raw\300000.wav" />
-	  <MauiAsset Remove="Resources\raw\4000.wav" />
-	  <MauiAsset Remove="Resources\raw\40000.wav" />
-	  <MauiAsset Remove="Resources\raw\400000.wav" />
-	  <MauiAsset Remove="Resources\raw\5000.wav" />
-	  <MauiAsset Remove="Resources\raw\50000.wav" />
-	  <MauiAsset Remove="Resources\raw\500000.wav" />
-	  <MauiAsset Remove="Resources\raw\abertura-show-do-milhao.mp3" />
 	  <MauiAsset Remove="Resources\raw\errou.wav" />
-	  <MauiAsset Remove="Resources\raw\ganhou.wav" />
 	  <MauiAsset Remove="Resources\raw\parabens.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\raw\1000.wav" />
-	  <None Remove="Resources\raw\10000.wav" />
-	  <None Remove="Resources\raw\1000000.wav" />
-	  <None Remove="Resources\raw\100000a.wav" />
-	  <None Remove="Resources\raw\100000b.wav" />
-	  <None Remove="Resources\raw\2000.wav" />
-	  <None Remove="Resources\raw\20000.wav" />
-	  <None Remove="Resources\raw\200000.wav" />
-	  <None Remove="Resources\raw\3000.wav" />
-	  <None Remove="Resources\raw\30000.wav" />
-	  <None Remove="Resources\raw\300000.wav" />
-	  <None Remove="Resources\raw\4000.wav" />
-	  <None Remove="Resources\raw\40000.wav" />
-	  <None Remove="Resources\raw\400000.wav" />
-	  <None Remove="Resources\raw\5000.wav" />
-	  <None Remove="Resources\raw\50000.wav" />
-	  <None Remove="Resources\raw\500000.wav" />
-	  <None Remove="Resources\raw\abertura-show-do-milhao.mp3" />
+	  <None Remove="Resources\Images\show.png" />
+	  <None Remove="Resources\raw\0.mp3" />
+	  <None Remove="Resources\raw\1.wav" />
+	  <None Remove="Resources\raw\10.wav" />
+	  <None Remove="Resources\raw\11.wav" />
+	  <None Remove="Resources\raw\12.wav" />
+	  <None Remove="Resources\raw\13.wav" />
+	  <None Remove="Resources\raw\14.wav" />
+	  <None Remove="Resources\raw\15.wav" />
+	  <None Remove="Resources\raw\16.wav" />
+	  <None Remove="Resources\raw\2.wav" />
+	  <None Remove="Resources\raw\3.wav" />
+	  <None Remove="Resources\raw\4.wav" />
+	  <None Remove="Resources\raw\5.wav" />
+	  <None Remove="Resources\raw\6.wav" />
+	  <None Remove="Resources\raw\7.wav" />
+	  <None Remove="Resources\raw\8.wav" />
+	  <None Remove="Resources\raw\9.wav" />
+	  <None Remove="Resources\raw\acertou.wav" />
 	  <None Remove="Resources\raw\errou.wav" />
-	  <None Remove="Resources\raw\ganhou.wav" />
+	  <None Remove="Resources\raw\naofoi.wav" />
 	  <None Remove="Resources\raw\parabens.wav" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Content Include="Resources\raw\1000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\10000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\1000000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\100000a.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\100000b.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\2000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\20000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\200000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\3000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\30000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\300000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\4000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\40000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\400000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\5000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\50000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\500000.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\abertura-show-do-milhao.mp3">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\errou.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\ganhou.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
-	  <Content Include="Resources\raw\parabens.wav">
-	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
+	  <None Remove="Resources\raw\terminou.wav" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -199,6 +97,18 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="Plugin.Maui.Audio" Version="3.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="fim\errou.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="fim\ganhou.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="fim\Parou.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

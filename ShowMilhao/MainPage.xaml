@@ -10,13 +10,13 @@
                     <VisualStateGroup x:Name="CheckedStates">
                         <VisualState x:Name="Checked">
                             <VisualState.Setters>
-                                <Setter Property="TextColor" Value="Green"/>
+                                <Setter Property="TextColor" Value="LightGreen"/>
                                 <Setter Property="Opacity" Value="1"/>
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Unchecked">
                             <VisualState.Setters>
-                                <Setter Property="TextColor" Value="Red"/>
+                                <Setter Property="TextColor" Value="White"/>
                                 <Setter Property="Opacity" Value="0.5"/>
                             </VisualState.Setters>
                         </VisualState>
@@ -25,23 +25,43 @@
             </Setter>
         </Style>
     </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+         
+            <GradientStop Color="SlateBlue" Offset="0.5"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
     <!-- Crt + K + D-->
     <StackLayout Spacing="10" Margin="10">
-        <Grid ColumnDefinitions="*,*,*"
-              RowDefinitions="Auto, Auto">
-            <Label Grid.Column="0"  Text="Premio: "/>
-            <Label Grid.Column="1"  Text="Nível: "/>
-            <Label Grid.Column="2"  Text="Pergunta: "/>
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" >
+            <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
-            <Label Grid.Column="0" Grid.Row="1"  x:Name="lbl_premio" />
-            <Label Grid.Column="1" Grid.Row="1"  x:Name="lbl_nivel" />
-            <Label Grid.Column="2" Grid.Row="1"  x:Name="lbl_pergunta" />
+            <Label Grid.Column="0" Grid.Row="1" Text="Bem-vindo ao Jogo do Milhão! " TextColor="White" x:Name="texto1"/> 
+            <Label Grid.Column="0" Grid.Row="2" Text="Prepare-se para uma jornada emocionante em busca do prêmio dos seus sonhos! Aqui, você terá a chance de testar seus conhecimentos divertir com perguntas desafiadoras. Responda corretamente e suba na escada dos prêmios, mas lembre-se: você pode usar as ajudas para não ficar na dúvida! " 
+                   TextColor="White" x:Name="text2"/>
+            <Label Grid.Column="0" Grid.Row="3" Text="A sorte pode estar do seu lado, mas a sabedoria é a verdadeira chave para o sucesso! Está pronto para desafiar seus limites e conquistar a fortuna? Então, clique em 'começar' e venha se divertir com a gente!" TextColor="White" x:Name="texto3"/>
+            <Label Grid.Column="0" Grid.Row="4" Text="Boa sorte! 🌟" TextColor="White" x:Name="texto4"/>
+            
 
         </Grid>
-        
-        <Button Text="Sortear Fácil" Clicked="Button_Clicked"/>
+       
+         <Grid ColumnDefinitions="*,*,*"
+              RowDefinitions="Auto, Auto" Margin="10" x:Name="tabela" >
+            <Label Grid.Column="0"  Text="Premio: " TextColor="White"/>
+            <Label Grid.Column="1"  Text="Nível: " TextColor="White"/>
+            <Label Grid.Column="2"  Text="Pergunta: " TextColor="White"/>
 
-        <Label Text="{Binding Enunciado}"/>
+            <Label Grid.Column="0" Grid.Row="1"  x:Name="lbl_premio"  TextColor="White"/>
+            <Label Grid.Column="1" Grid.Row="1"  x:Name="lbl_nivel" TextColor="White"/>
+            <Label Grid.Column="2" Grid.Row="1"  x:Name="lbl_pergunta"  TextColor="White"/>
+
+        </Grid>
+
+        <Button Text="Começar" x:Name="comeco" Clicked="Button_Clicked" TextColor="White" MaximumWidthRequest="800"/>
+
+        <Label Text="{Binding Enunciado}" TextColor="White"/>
 
         <StackLayout>
 
@@ -60,9 +80,9 @@
         </StackLayout>
 
 
-        <StackLayout Orientation="Horizontal">
-            <Button Text="Parar" />
-            <Button Text="Proxima" Clicked="Button_Clicked_Proximo"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="Parar" Margin="20"/>
+            <Button Text="Proxima" Clicked="Button_Clicked_Proximo" Margin="20"/>
         </StackLayout>
 
     </StackLayout>

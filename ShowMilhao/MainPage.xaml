@@ -81,7 +81,7 @@
 
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Parar" Margin="20"/>
+            <Button Text="Parar" Margin="20" Clicked="Button_Clicked_1"/>
             <Button Text="Proxima" Clicked="Button_Clicked_Proximo" Margin="20"/>
         </StackLayout>
 

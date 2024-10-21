@@ -62,6 +62,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="fim\errou.xaml.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiAsset Remove="Resources\raw\errou.wav" />
 	  <MauiAsset Remove="Resources\raw\parabens.wav" />
 	</ItemGroup>
@@ -100,13 +104,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="fim\errou.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="fim\ganhou.xaml">
+	  <MauiXaml Update="fim\Ganhou.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="fim\Parou.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="fim\Perdeu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

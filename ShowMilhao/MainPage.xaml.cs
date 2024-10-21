@@ -1,5 +1,6 @@
 ﻿
 using Plugin.Maui.Audio;
+using ShowMilhao.Models;
 
 namespace ShowMilhao
 
@@ -9,8 +10,9 @@ namespace ShowMilhao
         double premio = 1000;
         int pergunta_count = 1;
         string nivel = "Fácil";
-        
+        double ganho = 0;
 
+        
         public MainPage()
         {
             InitializeComponent();
@@ -175,6 +177,26 @@ namespace ShowMilhao
                 await DisplayAlert("ACERTOU !!", resp, "ok");                
                 
                 avanca_pergunta();
+
+                if(pergunta_count == 6)
+                {
+                    ganho = premio;
+                }
+                else if(pergunta_count == 11)
+                {
+                    ganho = premio;
+
+                }
+                else if(pergunta_count == 16)
+                {
+                    ganho = premio;
+                }
+                else
+                {
+                    ganho += premio;
+                }
+
+                
                 
             }
             else
@@ -198,13 +220,16 @@ namespace ShowMilhao
 
             if (pergunta_count < 5)
             {
+                
                 premio += 1000;
                 this.BindingContext = App.getRendomPerguntaFacil();
                 TocaSom();
+                
             };
 
             if (pergunta_count == 5)
             {
+                
                 premio = 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
                 nivel = "Médio";
@@ -239,19 +264,24 @@ namespace ShowMilhao
                 nivel = "Final";
                 TocaSom();
             };
-            if(pergunta_count == 17)
+            if(pergunta_count == 16)
             {
-                Navigation.PushAsync(new fim.ganhou());
+                Navigation.PushAsync(new fim.Ganhou());
             };
          
+            pergunta_count++;
+
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
             lbl_premio.Text = premio.ToString("C");
 
-            pergunta_count++;
+            
         }
 
-       
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {         
+            Navigation.PushAsync(new fim.Parou(ganho));
+        }
     }
 
 }

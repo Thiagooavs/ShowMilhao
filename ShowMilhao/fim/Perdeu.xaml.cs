@@ -1,8 +1,8 @@
 namespace ShowMilhao.fim;
 
-public partial class Ganhou : ContentPage
+public partial class Perdeu : ContentPage
 {
-	public Ganhou()
+	public Perdeu()
 	{
 		InitializeComponent();
 	}

@@ -3,10 +3,37 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowMilhao.fim.Parou"
              Title="Parou">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+
+            <GradientStop Color="SlateBlue" Offset="0.5"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout Spacing="10" Margin="10">
+        <VerticalStackLayout>
+
+            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto, auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
+                <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Text="Parabéns!" TextColor="White" x:Name="texto1"/>
+                <Label Grid.Column="0" Grid.Row="2" Text="Você decidiu parar e levar a grana para casa! Uma escolha sábia!" TextColor="White" x:Name="text2"/>
+                <Label Grid.Column="0" Grid.Row="3" Text="Sua Pontuação Final:" TextColor="White" x:Name="texto3"/>
+                <Label Grid.Column="0" Grid.Row="4" x:Name="pontuacao" TextColor="White" />
+                <Label Grid.Column="0" Grid.Row="5" Text="Você jogou muito bem e merece essa vitória! Aproveite o prêmio e até a próxima!" TextColor="White" x:Name="texto5"/>
+
+                <Button Grid.Column="0" Grid.Row="6" Text="Denovo" x:Name="comeco"  TextColor="White" MaximumWidthRequest="800" Margin="20"/>
+
+            </Grid>
+
+
+        </VerticalStackLayout>
+
+
+
+
+
+
+    </StackLayout>
 </ContentPage>

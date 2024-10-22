@@ -19,7 +19,7 @@
         CornerRadius="15"
            Padding="20"
            HasShadow="True">
-            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos">
+            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos">
                 <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
                 <Label Grid.Column="0" Grid.Row="1" Text="Olá, campeão!" TextColor="Gold" FontSize="Header" VerticalOptions="Center" />
@@ -30,11 +30,9 @@
                 <Label Grid.Column="0" Grid.Row="6" Text="Aproveite para refletir sobre suas jogadas e preparar-se para a próxima vez. Estamos torcendo por você e mal podemos esperar para vê-lo de volta na próxima rodada!" TextColor="White" />
                 <Label Grid.Column="0" Grid.Row="7" Text="Até a próxima, e lembre-se: cada final é um novo começo! 🎉" TextColor="White" />
 
-
-                <Button Grid.Column="0" Grid.Row="8" Text="Denovo" x:Name="comeco" TextColor="White" BackgroundColor="#FFD700" 
+                <Button Grid.Column="0" Grid.Row="8" Text="Denovo" Clicked="comeco_Clicked" x:Name="comeco" TextColor="White" BackgroundColor="#FFD700" 
                 MaximumWidthRequest="300" Margin="20"/>
-                <Button Grid.Column="0" Grid.Row="9" Text="🏆Ranking" x:Name="rank" TextColor="White" BackgroundColor="#FFD700" 
-                MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center"/>
+            
             </Grid>
         </Frame>
     </StackLayout>

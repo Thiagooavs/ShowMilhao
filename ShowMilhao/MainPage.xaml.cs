@@ -119,7 +119,7 @@ namespace ShowMilhao
           enuncia.IsVisible = true;
             continua.IsVisible = true;
             para.IsVisible = true;
-            rank.IsVisible = false;
+            
 
             
         }
@@ -174,9 +174,7 @@ namespace ShowMilhao
             {
                 Stream track = FileSystem.OpenAppPackageFileAsync("acertou.wav").Result;
                 AudioManager.Current.CreatePlayer(track).Play();
-                
-
-                await DisplayAlert("ACERTOU !!", resp, "ok");                
+                                              
                 
                 avanca_pergunta();
 
@@ -190,13 +188,31 @@ namespace ShowMilhao
 
                 Stream track = FileSystem.OpenAppPackageFileAsync("naofoi.wav").Result;
                 AudioManager.Current.CreatePlayer(track).Play();
-
-                DisplayAlert("Você errou", "Você perdeu", "ok");
-
-                pergunta_count = 0;
-                premio = 0;
+                           
                 Navigation.PushAsync(new fim.Perdeu(ganho));
-                
+
+                 premio = 1000;
+                 pergunta_count = 1;
+                 nivel = "Fácil";
+                 ganho = 0;
+
+                tabela.IsVisible = false;
+                texto1.IsVisible = true;
+                text2.IsVisible = true;
+                texto3.IsVisible = true;
+                texto4.IsVisible = true;
+                comeco.IsVisible = true;
+                alterna.IsVisible =false;
+                enuncia.IsVisible = false;
+                continua.IsVisible = false;
+                para.IsVisible = false;
+               
+
+                lbl_pergunta.Text = pergunta_count.ToString();
+                lbl_nivel.Text = nivel.ToString();
+                lbl_premio.Text = premio.ToString("C");
+
+
             }
 
 
@@ -262,6 +278,7 @@ namespace ShowMilhao
             {
                 ganho = premio;
                 Navigation.PushAsync(new fim.Ganhou());
+                AudioManager.Current.CreatePlayer(FileSystem.OpenAppPackageFileAsync("terminou.wav").Result).Play();
             };
          
             pergunta_count++;
@@ -274,8 +291,31 @@ namespace ShowMilhao
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)
-        {         
+        {
+
             Navigation.PushAsync(new fim.Parou(ganho));
+            
+            tabela.IsVisible = false;
+            texto1.IsVisible = true;
+            text2.IsVisible = true;
+            texto3.IsVisible = true;
+            texto4.IsVisible = true;
+            comeco.IsVisible = true;
+            alterna.IsVisible = false;
+            enuncia.IsVisible = false;
+            continua.IsVisible = false;
+            para.IsVisible = false;
+            
+
+             premio = 1000;
+             pergunta_count = 1;
+             nivel = "Fácil";
+             ganho = 0;
+
+            lbl_pergunta.Text = pergunta_count.ToString();
+            lbl_nivel.Text = nivel.ToString();
+            lbl_premio.Text = premio.ToString("C");
+
         }
     }
 

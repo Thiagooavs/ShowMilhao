@@ -6,4 +6,11 @@ public partial class Ganhou : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void comeco_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
+
+  
 }

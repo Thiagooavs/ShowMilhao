@@ -11,4 +11,10 @@ public partial class Parou : ContentPage
         pontuacao.Text = "R$ " + valor_ganho.ToString() + ",00";
 
     }
+
+   
+    private void comeco_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
 }

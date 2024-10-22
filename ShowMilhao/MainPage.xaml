@@ -73,7 +73,7 @@
         </Grid>
 
 
-        <Button Text="Começar" x:Name="comeco" Clicked="Button_Clicked" TextColor="White" MaximumWidthRequest="800" BackgroundColor="Red" CornerRadius="20" Padding="10"/>
+        <Button Text="Começar" x:Name="comeco" Clicked="Button_Clicked" TextColor="White" MaximumWidthRequest="800" BackgroundColor="#FFD700" CornerRadius="20" Padding="10" FontAttributes="Bold"/>
 
         <Frame BackgroundColor="Red"
        BorderColor="White"
@@ -127,8 +127,6 @@
                     <Button Text="Próxima" Clicked="Button_Clicked_Proximo"  BackgroundColor="red" FontAttributes="Bold" />
                 </Frame>
 
-                <Button Grid.Column="0" Grid.Row="9" Text="🏆Ranking" x:Name="rank" TextColor="White" BackgroundColor="#FFD700" 
-                  MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center" />
             </StackLayout>
         </StackLayout>
 

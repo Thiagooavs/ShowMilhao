@@ -1,3 +1,5 @@
+using Plugin.Maui.Audio;
+
 namespace ShowMilhao.fim;
 
 public partial class Perdeu : ContentPage
@@ -8,5 +10,14 @@ public partial class Perdeu : ContentPage
 
 		pontuacao.Text = "R$ " + (valor_ganho / 2).ToString() + ",00";
 
-	}
+       
+
+    }
+
+    private void comeco_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
+    }
+
+    
 }

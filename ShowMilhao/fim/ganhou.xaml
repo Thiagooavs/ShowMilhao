@@ -17,7 +17,7 @@
             CornerRadius="15"
                Padding="20"
                HasShadow="True">
-            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto, auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
+            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
                 <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
                 <Label Grid.Column="0" Grid.Row="1" Text="Parabéns! Você é o Grande Vencedor!" TextColor="Gold" FontSize="Large" x:Name="texto1" HorizontalOptions="Center"/>
@@ -27,10 +27,9 @@
                 <Label Grid.Column="0" Grid.Row="4" Text="Agora, que tal compartilhar essa vitória com amigos e familiares? Quem sabe você não os inspira a se juntar a nós na próxima rodada?" TextColor="White" x:Name="texto4" HorizontalOptions="Center"/>
                 <Label Grid.Column="0" Grid.Row="5" Text="Até a próxima, campeão! 🎉💰" TextColor="White" x:Name="texto5" HorizontalOptions="Center"/>
 
-                <Button Grid.Column="0" Grid.Row="6" Text="Denovo" x:Name="comeco" TextColor="White" BackgroundColor="#FFD700" 
+                <Button Grid.Column="0" Grid.Row="6" Text="Denovo" Clicked="comeco_Clicked" x:Name="comeco" TextColor="White" BackgroundColor="#FFD700" 
                     MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center"/>
-                <Button Grid.Column="0" Grid.Row="7" Text="🏆Ranking" x:Name="rank" TextColor="White" BackgroundColor="#FFD700" 
-                    MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center"/>
+                
                 
             </Grid>
         </Frame>

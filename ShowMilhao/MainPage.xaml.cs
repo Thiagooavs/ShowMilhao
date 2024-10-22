@@ -119,6 +119,7 @@ namespace ShowMilhao
           enuncia.IsVisible = true;
             continua.IsVisible = true;
             para.IsVisible = true;
+            rank.IsVisible = false;
 
             
         }
@@ -191,6 +192,10 @@ namespace ShowMilhao
                 AudioManager.Current.CreatePlayer(track).Play();
 
                 DisplayAlert("Você errou", "Você perdeu", "ok");
+
+                pergunta_count = 0;
+                premio = 0;
+                Navigation.PushAsync(new fim.Perdeu(ganho));
                 
             }
 

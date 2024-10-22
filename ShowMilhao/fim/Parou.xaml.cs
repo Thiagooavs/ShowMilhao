@@ -8,7 +8,7 @@ public partial class Parou : ContentPage
 	{
 		InitializeComponent();
 
-        pontuacao.Text = valor_ganho.ToString();
+        pontuacao.Text = "R$ " + valor_ganho.ToString() + ",00";
 
     }
 }

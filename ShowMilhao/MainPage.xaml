@@ -26,7 +26,7 @@
                                 <Setter Property="Padding" Value="10"/>
                                 <Setter Property="BorderColor" Value="White"/>
                                 <Setter Property="CornerRadius" Value="10" />
-                                <Setter Property="MinimumWidthRequest" Value="300" />
+                                <Setter Property="MinimumWidthRequest" Value="200" />
                                 <Setter Property="Margin" Value="5" />
 
 
@@ -126,6 +126,9 @@
                        x:Name="continua">
                     <Button Text="Próxima" Clicked="Button_Clicked_Proximo"  BackgroundColor="red" FontAttributes="Bold" />
                 </Frame>
+
+                <Button Grid.Column="0" Grid.Row="9" Text="🏆Ranking" x:Name="rank" TextColor="White" BackgroundColor="#FFD700" 
+                  MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center" />
             </StackLayout>
         </StackLayout>
 

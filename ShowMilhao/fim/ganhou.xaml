@@ -3,60 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowMilhao.fim.Ganhou"
              Title="Ganhou">
-    <ContentPage.Resources>
-        <Style TargetType="RadioButton">
-            <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CheckedStates">
-                        <VisualState x:Name="Checked">
-                            <VisualState.Setters>
-                                <Setter Property="TextColor" Value="LightGreen"/>
-                                <Setter Property="Opacity" Value="1"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Unchecked">
-                            <VisualState.Setters>
-                                <Setter Property="TextColor" Value="White"/>
-                                <Setter Property="Opacity" Value="0.5"/>
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-            </Setter>
-        </Style>
-    </ContentPage.Resources>
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-
             <GradientStop Color="SlateBlue" Offset="0.5"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <StackLayout Spacing="10" Margin="10">
-        <VerticalStackLayout>
-
-            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto, auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
+    <StackLayout Spacing="10" Margin="10" HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame BackgroundColor="#003366"  
+            BorderColor="#FFD700"
+            
+            CornerRadius="15"
+               Padding="20"
+               HasShadow="True">
+            <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto,auto, auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
                 <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
-                <Label Grid.Column="0" Grid.Row="1" Text="Parabéns! Você é o Grande Vencedor!" TextColor="White" x:Name="texto1"/>
+                <Label Grid.Column="0" Grid.Row="1" Text="Parabéns! Você é o Grande Vencedor!" TextColor="Gold" FontSize="Large" x:Name="texto1" HorizontalOptions="Center"/>
                 <Label Grid.Column="0" Grid.Row="2" Text="Você chegou ao topo e conquistou a incrível quantia de R$ 1.000.000! Sua sabedoria, estratégia e coragem brilharam a cada pergunta, e agora você se tornou parte da história do Jogo do Milhão!" 
-   TextColor="White" x:Name="text2"/>
-                <Label Grid.Column="0" Grid.Row="3" Text="Agradecemos por participar e por sua incrível performance. Este prêmio é o reconhecimento do seu conhecimento e dedicação. Aproveite cada momento dessa conquista!" TextColor="White" x:Name="texto3"/>
-                <Label Grid.Column="0" Grid.Row="4" Text="Agora, que tal compartilhar essa vitória com amigos e familiares? Quem sabe você não os inspira a se juntar a nós na próxima rodada?" TextColor="White" x:Name="texto4"/>
-                <Label Grid.Column="0" Grid.Row="5" Text="Até a próxima, campeão! 🎉💰" TextColor="White" x:Name="texto5"/>
+                       TextColor="White" x:Name="text2" HorizontalOptions="Center"/>
+                <Label Grid.Column="0" Grid.Row="3" Text="Agradecemos por participar e por sua incrível performance. Este prêmio é o reconhecimento do seu conhecimento e dedicação. Aproveite cada momento dessa conquista!" TextColor="White" x:Name="texto3" HorizontalOptions="Center"/>
+                <Label Grid.Column="0" Grid.Row="4" Text="Agora, que tal compartilhar essa vitória com amigos e familiares? Quem sabe você não os inspira a se juntar a nós na próxima rodada?" TextColor="White" x:Name="texto4" HorizontalOptions="Center"/>
+                <Label Grid.Column="0" Grid.Row="5" Text="Até a próxima, campeão! 🎉💰" TextColor="White" x:Name="texto5" HorizontalOptions="Center"/>
 
-                <Button Grid.Column="0" Grid.Row="6" Text="Denovo" x:Name="comeco"  TextColor="White" MaximumWidthRequest="800" Margin="20"/>
-
+                <Button Grid.Column="0" Grid.Row="6" Text="Denovo" x:Name="comeco" TextColor="White" BackgroundColor="#FFD700" 
+                    MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center"/>
+                <Button Grid.Column="0" Grid.Row="7" Text="🏆Ranking" x:Name="rank" TextColor="White" BackgroundColor="#FFD700" 
+                    MaximumWidthRequest="300" Margin="20" HorizontalOptions="Center"/>
+                
             </Grid>
-
-
-        </VerticalStackLayout>
-
-
-
-
-
-
+        </Frame>
     </StackLayout>
 </ContentPage>

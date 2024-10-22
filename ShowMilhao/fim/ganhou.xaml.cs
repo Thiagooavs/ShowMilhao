@@ -7,6 +7,7 @@ public partial class Ganhou : ContentPage
 	public Ganhou()
 	{
 		InitializeComponent();
+
         AudioManager.Current.CreatePlayer(FileSystem.OpenAppPackageFileAsync("terminou.wav").Result).Play();
     }
 

@@ -101,7 +101,7 @@ namespace ShowMilhao
                 Alternativas = new()
                 {
                     new Alternativa { Correta = false, Descricao = "PARANA"},
-                    new Alternativa { Correta = false, Descricao = "MSANTA CATARINA"},
+                    new Alternativa { Correta = false, Descricao = "SANTA CATARINA"},
                     new Alternativa { Correta = true, Descricao = "BAHIA"},
                     new Alternativa { Correta = false, Descricao = "SÃO PAULO"},
 
@@ -190,7 +190,7 @@ namespace ShowMilhao
                  Enunciado = "Qual é o maior mamífero terrestre?",
                  Alternativas = new()
                  {
-                     new Alternativa { Correta = false, Descricao = "ELEFANTE AFRICANO" },
+                     new Alternativa { Correta = false, Descricao = "GIRAFA" },
                      new Alternativa { Correta = false, Descricao = "BISONTE" },
                      new Alternativa { Correta = false, Descricao = "RINOCERONTE" },
                      new Alternativa { Correta = true, Descricao = "ELEFANTE AFRICANO" },
@@ -309,8 +309,8 @@ new Pergunta
     Enunciado = "Quem escreveu 'O Pequeno Príncipe'?",
     Alternativas = new()
     {
-        new Alternativa { Correta = true, Descricao = "ANTOINE DE VERNE" },
-        new Alternativa { Correta = false, Descricao = "ANTOINE DE SAINT-EXUPÉRY" },
+        new Alternativa { Correta = false, Descricao = "ANTOINE DE VERNE" },
+        new Alternativa { Correta = true, Descricao = "ANTOINE DE SAINT-EXUPÉRY" },
         new Alternativa { Correta = false, Descricao = "JULES VERNE" },
         new Alternativa { Correta = false, Descricao = "CHARLES DICKENS" },
     }

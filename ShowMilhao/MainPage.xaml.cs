@@ -21,7 +21,7 @@ namespace ShowMilhao
             lbl_pergunta.Text = pergunta_count.ToString();
             lbl_nivel.Text = nivel.ToString();
             lbl_premio.Text = premio.ToString("C");
-            tabela.Opacity = 0;
+            
 
 
             //Audio som
@@ -108,18 +108,19 @@ namespace ShowMilhao
         private void Button_Clicked(object sender, EventArgs e)
         {
             this.BindingContext =  App.getRendomPerguntaFacil();
-            comeco.Opacity = 0;
-            tabela.Opacity = 1;
+            
+            tabela.IsVisible = true;
+            texto1.IsVisible = false;
+            text2.IsVisible = false;
+            texto3.IsVisible = false;
+            texto4.IsVisible = false;
+            comeco.IsVisible = false; 
+            alterna.IsVisible = true;
+          enuncia.IsVisible = true;
+            continua.IsVisible = true;
+            para.IsVisible = true;
 
-            //Feio, mas é o que da para faezr agora
-            texto1.FontSize = 1;
-            text2.FontSize = 1;
-            texto3.FontSize = 1;
-            texto4.FontSize = 1;
-            texto1.Opacity = 0;
-            text2.Opacity = 0; 
-            texto3.Opacity = 0;
-            texto4.Opacity = 0;
+            
         }
 
         private async void Button_Clicked_Proximo(object sender, EventArgs e)
@@ -178,23 +179,7 @@ namespace ShowMilhao
                 
                 avanca_pergunta();
 
-                if(pergunta_count == 6)
-                {
-                    ganho = premio;
-                }
-                else if(pergunta_count == 11)
-                {
-                    ganho = premio;
-
-                }
-                else if(pergunta_count == 16)
-                {
-                    ganho = premio;
-                }
-                else
-                {
-                    ganho += premio;
-                }
+                
 
                 
                 
@@ -220,7 +205,7 @@ namespace ShowMilhao
 
             if (pergunta_count < 5)
             {
-                
+                ganho = premio;
                 premio += 1000;
                 this.BindingContext = App.getRendomPerguntaFacil();
                 TocaSom();
@@ -229,7 +214,7 @@ namespace ShowMilhao
 
             if (pergunta_count == 5)
             {
-                
+                ganho = premio;
                 premio = 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
                 nivel = "Médio";
@@ -238,6 +223,7 @@ namespace ShowMilhao
 
             if (pergunta_count > 5 && pergunta_count < 10)
             {
+                ganho = premio;
                 premio += 10000;
                 this.BindingContext = App.getRendomPerguntaMedias();
                 TocaSom();
@@ -245,6 +231,7 @@ namespace ShowMilhao
             
             if (pergunta_count == 10)
             {
+                ganho = premio;
                 premio = 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
                 nivel="Difícil";
@@ -253,12 +240,14 @@ namespace ShowMilhao
 
             if (pergunta_count > 10 && pergunta_count <15)
             {
+                ganho = premio;
                 premio += 100000;
                 this.BindingContext = App.getRendomPerguntaDificeis();
                 TocaSom();
             };
             if (pergunta_count == 15)
             {
+                ganho = premio;
                 premio = 1000000;
                 this.BindingContext = App.getRendomPerguntaFinais();
                 nivel = "Final";
@@ -266,6 +255,7 @@ namespace ShowMilhao
             };
             if(pergunta_count == 16)
             {
+                ganho = premio;
                 Navigation.PushAsync(new fim.Ganhou());
             };
          

@@ -1,23 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ShowMilhao.MainPage">
+             x:Class="ShowMilhao.MainPage"
+             >
 
     <ContentPage.Resources>
+
+
+
         <Style TargetType="RadioButton">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CheckedStates">
                         <VisualState x:Name="Checked">
                             <VisualState.Setters>
-                                <Setter Property="TextColor" Value="LightGreen"/>
-                                <Setter Property="Opacity" Value="1"/>
+                                <Setter Property="TextColor" Value="Yellow"/>
+                                <Setter Property="CornerRadius" Value="10" />
                             </VisualState.Setters>
                         </VisualState>
                         <VisualState x:Name="Unchecked">
                             <VisualState.Setters>
                                 <Setter Property="TextColor" Value="White"/>
-                                <Setter Property="Opacity" Value="0.5"/>
+                                <Setter Property="BackgroundColor" Value="Red"/>
+                                <Setter Property="Opacity" Value="0.8"/>
+                                <Setter Property="Padding" Value="10"/>
+                                <Setter Property="BorderColor" Value="White"/>
+                                <Setter Property="CornerRadius" Value="10" />
+                                <Setter Property="MinimumWidthRequest" Value="300" />
+                                <Setter Property="Margin" Value="5" />
+
+
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -26,29 +38,30 @@
         </Style>
     </ContentPage.Resources>
 
-    <ContentPage.Background>
+    <ContentPage.Background >
         <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-         
+
             <GradientStop Color="SlateBlue" Offset="0.5"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
     <!-- Crt + K + D-->
-    <StackLayout Spacing="10" Margin="10">
-        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" >
+    <StackLayout Spacing="10" Margin="10" HorizontalOptions="Center">
+        <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto" RowSpacing="10" HorizontalOptions="Center"  >
             <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
-            <Label Grid.Column="0" Grid.Row="1" Text="Bem-vindo ao Jogo do Milhão! " TextColor="White" x:Name="texto1"/> 
+
+            <Label Grid.Column="0" Grid.Row="1" Text="Bem-vindo ao Jogo do Milhão! " TextColor="White" x:Name="texto1" FontSize="24" FontAttributes="Bold"/>
             <Label Grid.Column="0" Grid.Row="2" Text="Prepare-se para uma jornada emocionante em busca do prêmio dos seus sonhos! Aqui, você terá a chance de testar seus conhecimentos divertir com perguntas desafiadoras. Responda corretamente e suba na escada dos prêmios, mas lembre-se: você pode usar as ajudas para não ficar na dúvida! " 
                    TextColor="White" x:Name="text2"/>
             <Label Grid.Column="0" Grid.Row="3" Text="A sorte pode estar do seu lado, mas a sabedoria é a verdadeira chave para o sucesso! Está pronto para desafiar seus limites e conquistar a fortuna? Então, clique em 'começar' e venha se divertir com a gente!" TextColor="White" x:Name="texto3"/>
             <Label Grid.Column="0" Grid.Row="4" Text="Boa sorte! 🌟" TextColor="White" x:Name="texto4"/>
-            
+
 
         </Grid>
-       
-         <Grid ColumnDefinitions="*,*,*"
-              RowDefinitions="Auto, Auto" Margin="10" x:Name="tabela" >
+
+        <Grid ColumnDefinitions="*,*,*"
+              RowDefinitions="Auto, Auto" Margin="10" x:Name="tabela" IsVisible="False" >
             <Label Grid.Column="0"  Text="Premio: " TextColor="White"/>
             <Label Grid.Column="1"  Text="Nível: " TextColor="White"/>
             <Label Grid.Column="2"  Text="Pergunta: " TextColor="White"/>
@@ -59,11 +72,21 @@
 
         </Grid>
 
-        <Button Text="Começar" x:Name="comeco" Clicked="Button_Clicked" TextColor="White" MaximumWidthRequest="800"/>
 
-        <Label Text="{Binding Enunciado}" TextColor="White"/>
+        <Button Text="Começar" x:Name="comeco" Clicked="Button_Clicked" TextColor="White" MaximumWidthRequest="800" BackgroundColor="Red" CornerRadius="20" Padding="10"/>
 
-        <StackLayout>
+        <Frame BackgroundColor="Red"
+       BorderColor="White"
+       CornerRadius="10"
+       Padding="5"
+       HasShadow="False"
+               x:Name="enuncia"
+               IsVisible="False">
+            <Label  TextColor="White" Text="{Binding Enunciado}" />
+        </Frame>
+
+
+        <StackLayout IsVisible="False" x:Name="alterna">
 
             <RadioButton x:Name="alt0" Content="{Binding Path=Alternativas[0].Descricao}"
                          Value="{Binding Path=Alternativas[0].Correta }"/>
@@ -80,9 +103,30 @@
         </StackLayout>
 
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-            <Button Text="Parar" Margin="20" Clicked="Button_Clicked_1"/>
-            <Button Text="Proxima" Clicked="Button_Clicked_Proximo" Margin="20"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="20">
+                <Frame BackgroundColor="Red"
+           BorderColor="White"
+           CornerRadius="20"
+           Padding="1"
+           HasShadow="False"
+           IsVisible="False"
+           x:Name="para"
+           >
+                    <Button Text="Parar" Clicked="Button_Clicked_1"  BackgroundColor="Red" FontAttributes="Bold"/>
+                </Frame>
+
+                <Frame BackgroundColor="Red"
+           BorderColor="White"
+           CornerRadius="20"
+           Padding="1"
+           HasShadow="False"
+           Margin="20,0"
+            IsVisible="False"  
+                       x:Name="continua">
+                    <Button Text="Próxima" Clicked="Button_Clicked_Proximo"  BackgroundColor="red" FontAttributes="Bold" />
+                </Frame>
+            </StackLayout>
         </StackLayout>
 
     </StackLayout>

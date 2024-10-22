@@ -17,7 +17,7 @@
             <Grid ColumnDefinitions="*" RowDefinitions="auto,auto,auto,auto,auto,auto, auto" RowSpacing="10" HorizontalOptions="Center" x:Name="fatos" VerticalOptions="Center">
                 <Image Grid.Column="0" Grid.Row="0" Source="show.png" MaximumWidthRequest="400"/>
 
-                <Label Grid.Column="0" Grid.Row="1" Text="Parabéns!" TextColor="White" x:Name="texto1"/>
+                <Label Grid.Column="0" Grid.Row="1" Text="Parabéns!" TextColor="White" x:Name="texto1" FontSize="Header" VerticalOptions="Center" />
                 <Label Grid.Column="0" Grid.Row="2" Text="Você decidiu parar e levar a grana para casa! Uma escolha sábia!" TextColor="White" x:Name="text2"/>
                 <Label Grid.Column="0" Grid.Row="3" Text="Sua Pontuação Final:" TextColor="White" x:Name="texto3"/>
                 <Label Grid.Column="0" Grid.Row="4" x:Name="pontuacao" TextColor="White" />

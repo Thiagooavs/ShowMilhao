@@ -4,8 +4,6 @@
 
 O Show do Milhão é uma recriação do famoso programa de TV brasileiro em formato de jogo de perguntas e respostas. Este projeto proporciona uma experiência nostálgica do popular game show onde os participantes podem testar seus conhecimentos gerais e tentar ganhar um milhão de reais virtuais.
 
-![Tela do Jogo Show do Milhão](https://i.imgur.com/RKv34Jz.png)
-
 ## 💻 Tecnologias Utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
@@ -21,15 +19,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - Diferentes níveis de dificuldade
 - Sistema de pontuação autêntico ao show original
 - Efeitos sonoros nostálgicos
-
-## 📸 Screenshots
-
-### Tela Inicial
-![Tela Inicial](https://i.imgur.com/oEaTdGw.png)
-
-### Exemplo de Pergunta
-![Pergunta](https://i.imgur.com/YgYlD3p.png)
-
 
 ## 🚀 Como Executar
 
